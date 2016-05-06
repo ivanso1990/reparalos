@@ -12,11 +12,14 @@ public class mainFrame extends JFrame {
 
 	public mainFrame() {
 		setTitle("Reparalos");
+		
+		ImageIcon img = crearImageHeader();
 		JComponent botonera = creaBotonera();
 		JComponent eco = creaEco();
 		
 		// Crea panel con botonera y eco
 		JSplitPane panelPrincipal = new JSplitPane(JSplitPane.VERTICAL_SPLIT, botonera, eco);
+		panelPrincipal.prepareImage(img, 100, 50, null);
 		
 		// Añade el panel a la ventana principal
 		getContentPane().add(panelPrincipal);
@@ -56,6 +59,12 @@ public class mainFrame extends JFrame {
 		// Se crea el campo de texto donde poner el eco
 		eco = new JTextField("Escoja una opción");
 		return eco;
+	}
+	
+	private ImageIcon crearImageHeader(){
+		ImageIcon icon = new ImageIcon("http://reparalos.com/countdown/header.jpg",
+                "a pretty but meaningless splat");
+		return icon; 
 	}
 
 
