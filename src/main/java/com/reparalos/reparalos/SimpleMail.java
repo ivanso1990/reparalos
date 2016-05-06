@@ -34,6 +34,8 @@ public class SimpleMail {
         message.setFrom(new InternetAddress("app@reparalos.com"));
         message.addRecipient(Message.RecipientType.TO,
              new InternetAddress("ivan.so1990@gmail.com"));
+        message.setSubject("CONSULTA APP");
+        message.setFileName(null);
 
         transport.connect();
         transport.sendMessage(message,
