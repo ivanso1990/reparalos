@@ -6,13 +6,13 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 public class javaBrowser {
-	public static void openBrowser() {
+	public static void openBrowser(String url) {
 		// Create Desktop object
 		Desktop d = Desktop.getDesktop();
 
 		// Browse a URL, say google.com
 		try {
-			d.browse(new URI("http://reparalos.com"));
+			d.browse(new URI(url));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
