@@ -35,9 +35,10 @@ public class SimpleMail {
         message.addRecipient(Message.RecipientType.TO,
              new InternetAddress("ivan.so1990@gmail.com"));
         message.setSubject("CONSULTA APP");
-        message.setFileName(null);
+        //message.setFileName(null);
 
-        transport.connect();
+        //transport.connect();
+        transport.connect(SMTP_HOST_NAME, SMTP_AUTH_USER, SMTP_AUTH_PWD);
         transport.sendMessage(message,
             message.getRecipients(Message.RecipientType.TO));
         transport.close();

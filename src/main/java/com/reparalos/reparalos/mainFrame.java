@@ -19,7 +19,7 @@ public class mainFrame extends JFrame {
 		
 		// Crea panel con botonera y eco
 		JSplitPane panelPrincipal = new JSplitPane(JSplitPane.VERTICAL_SPLIT, botonera, eco);
-		panelPrincipal.prepareImage(img, 100, 50, null);
+		
 		
 		// Añade el panel a la ventana principal
 		getContentPane().add(panelPrincipal);
